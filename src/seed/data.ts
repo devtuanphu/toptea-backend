@@ -628,7 +628,7 @@ const banner = (
 export const singles: Record<string, any> = {
   global: {
     siteName: 'TOP WELL TEA',
-    siteUrl: 'http://localhost:3010',
+    siteUrl: (process.env.FRONTEND_URL || 'http://localhost:3010').replace(/\/$/, ''),
     logo: img('brand/logo-mark.png', 'Biểu tượng TOP WELL TEA — lá trà và đường chân trời Mae Salong'),
     logoText: 'TOP WELL TEA',
     tagline: 'WELLNESS FROM MAE SALONG',

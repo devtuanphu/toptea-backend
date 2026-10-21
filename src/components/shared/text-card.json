@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_text_card",
+  "info": {
+    "displayName": "Thẻ nội dung"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

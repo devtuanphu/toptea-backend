@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "header",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "Header & menu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leftNav": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "rightNav": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "searchLabel": {
+      "type": "string"
+    },
+    "cartLabel": {
+      "type": "string"
+    },
+    "menuLabel": {
+      "type": "string"
+    },
+    "closeLabel": {
+      "type": "string"
+    },
+    "drawerLinksTitle": {
+      "type": "string"
+    },
+    "drawerLinks": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "drawerCta": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "skipLinkLabel": {
+      "type": "string"
+    }
+  }
+}

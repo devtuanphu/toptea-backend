@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_form_field",
+  "info": {
+    "displayName": "Trường biểu mẫu"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "mobileLabel": {
+      "type": "string"
+    },
+    "mobilePlaceholder": {
+      "type": "string"
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

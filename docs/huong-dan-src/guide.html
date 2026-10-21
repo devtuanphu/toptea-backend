@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Hướng dẫn quản trị nội dung website TOP WELL TEA</title>
+<link rel="stylesheet" href="file:///Users/rowan/Documents/rowan-works/top-well-1/frontend/node_modules/@fontsource/be-vietnam-pro/400.css">
+<link rel="stylesheet" href="file:///Users/rowan/Documents/rowan-works/top-well-1/frontend/node_modules/@fontsource/be-vietnam-pro/500.css">
+<link rel="stylesheet" href="file:///Users/rowan/Documents/rowan-works/top-well-1/frontend/node_modules/@fontsource/be-vietnam-pro/600.css">
+<link rel="stylesheet" href="file:///Users/rowan/Documents/rowan-works/top-well-1/frontend/node_modules/@fontsource/be-vietnam-pro/700.css">
+<link rel="stylesheet" href="file:///Users/rowan/Documents/rowan-works/top-well-1/frontend/node_modules/@fontsource/be-vietnam-pro/800.css">
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  :root { --ink:#0e2038; --muted:#4b5563; --line:#e5e7eb; --navy:#0a1e3c; --cream:#f4f1ea; --gold:#c9a96a; --red:#ef4444; --blue:#1d4ed8; --green:#047857; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:'Be Vietnam Pro', Arial, sans-serif; color:var(--ink); font-size:10.5pt; line-height:1.6; }
+  h1 { font-size:21pt; line-height:1.25; margin:0 0 6pt; }
+  h2 { font-size:15.5pt; margin:0 0 8pt; padding:6pt 10pt; border-left:5pt solid var(--navy); background:var(--cream); border-radius:4pt; break-after:avoid; }
+  h3 { font-size:12pt; margin:14pt 0 6pt; break-after:avoid; }
+  p { margin:0 0 7pt; }
+  ol, ul { margin:0 0 8pt; padding-left:18pt; }
+  li { margin:2pt 0; }
+  b, strong { font-weight:700; }
+  .chapter { break-before:page; }
+  .cover { height:257mm; display:flex; flex-direction:column; justify-content:center; padding:0 10mm; background:linear-gradient(160deg,#0a1e3c 0%,#143257 70%); color:#fff; border-radius:8pt; }
+  .cover .tag { display:inline-block; align-self:flex-start; padding:4pt 10pt; border-radius:99pt; background:var(--cream); color:var(--navy); font-weight:700; font-size:9pt; letter-spacing:.5pt; }
+  .cover h1 { font-size:26pt; margin:16pt 0 10pt; color:#fff; }
+  .cover h1 span { color:var(--gold); }
+  .cover p { color:#d1d5db; font-size:12pt; max-width:140mm; }
+  .cover table { margin-top:22pt; color:#e5e7eb; font-size:10.5pt; border-collapse:collapse; }
+  .cover td { padding:4pt 14pt 4pt 0; vertical-align:top; }
+  .cover td:first-child { color:var(--gold); font-weight:600; white-space:nowrap; }
+  figure { margin:6pt 0 10pt; break-inside:avoid; }
+  figure img { width:78%; margin:0 auto; border:1pt solid var(--line); border-radius:6pt; display:block; }
+  figcaption { text-align:center; font-size:9pt; color:var(--muted); margin-top:4pt; font-style:italic; }
+  .steps { counter-reset:s; list-style:none; padding:0; }
+  .steps > li { counter-increment:s; position:relative; padding-left:26pt; margin:5pt 0; }
+  .steps > li::before { content:counter(s); position:absolute; left:0; top:1pt; width:17pt; height:17pt; border-radius:50%; background:var(--red); color:#fff; font-weight:700; font-size:9pt; text-align:center; line-height:17pt; }
+  .plain { list-style:none; padding:0; }
+  .plain > li { position:relative; padding-left:26pt; margin:5pt 0; }
+  .num { display:inline-block; width:15pt; height:15pt; border-radius:50%; background:var(--red); color:#fff; font-weight:700; font-size:8.5pt; text-align:center; line-height:15pt; margin-right:3pt; }
+  .plain > li > .num:first-child { position:absolute; left:0; top:2pt; }
+  .box { border-radius:6pt; padding:8pt 11pt; margin:8pt 0 10pt; break-inside:avoid; }
+  .tip { background:#ecfdf5; border:1pt solid #a7f3d0; }
+  .warn { background:#fef2f2; border:1pt solid #fecaca; }
+  .note { background:#eff6ff; border:1pt solid #bfdbfe; }
+  .box b.t { display:block; margin-bottom:3pt; }
+  .tip b.t { color:var(--green); } .warn b.t { color:#b91c1c; } .note b.t { color:var(--blue); }
+  table.grid { width:100%; border-collapse:collapse; margin:6pt 0 10pt; font-size:9.3pt; break-inside:auto; }
+  table.grid th { background:var(--navy); color:#fff; text-align:left; padding:5pt 7pt; font-weight:600; }
+  table.grid td { border-bottom:1pt solid var(--line); padding:5pt 7pt; vertical-align:top; }
+  table.grid tr:nth-child(even) td { background:#f9fafb; }
+  table.grid tr { break-inside:avoid; }
+  .btn { display:inline-block; padding:0 6pt; border-radius:4pt; background:#eef2ff; border:1pt solid #c7d2fe; color:#3730a3; font-weight:600; font-size:9.5pt; white-space:nowrap; }
+  .field { display:inline-block; padding:0 5pt; border-radius:4pt; background:#fef3c7; border:1pt solid #fde68a; font-weight:600; font-size:9.5pt; }
+  code { font-family:'SFMono-Regular',Menlo,monospace; font-size:9pt; background:#f3f4f6; padding:0 4pt; border-radius:3pt; }
+  .toc { columns:2; column-gap:14mm; font-size:10.5pt; }
+  .toc div { break-inside:avoid; padding:3pt 0; border-bottom:1pt dotted #d1d5db; }
+  .toc span { color:var(--navy); font-weight:700; margin-right:6pt; }
+  .check li { list-style:none; margin-left:-14pt; }
+  .check li::before { content:'☐ '; color:var(--navy); font-weight:700; }
+  .small { font-size:9pt; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ============ BÌA ============ -->
+<section class="cover">
+  <span class="tag">TÀI LIỆU NỘI BỘ · DÀNH CHO NGƯỜI QUẢN TRỊ NỘI DUNG</span>
+  <h1>Hướng dẫn đăng &amp; sửa nội dung<br>website <span>TOP WELL TEA</span></h1>
+  <p>Tài liệu từng bước, có hình minh họa, dành cho người không có chuyên môn kỹ thuật: sửa chữ và ảnh trên các trang, quản lý sản phẩm, viết bài Blog, xử lý đơn hàng và thanh toán chuyển khoản.</p>
+  <table>
+    <tr><td>Trang quản trị</td><td>http://localhost:1340/admin <span class="small">(khi đưa lên mạng sẽ đổi sang địa chỉ thật, ví dụ https://cms.topwelltea…/admin)</span></td></tr>
+    <tr><td>Website</td><td>http://localhost:3010</td></tr>
+    <tr><td>Ngôn ngữ</td><td>Tiếng Việt</td></tr>
+    <tr><td>Phiên bản</td><td>Tháng 10/2026</td></tr>
+  </table>
+</section>
+
+<!-- ============ MỤC LỤC ============ -->
+<section class="chapter">
+  <h2>Mục lục</h2>
+  <div class="toc">
+    <div><span>0</span>Những điều cần biết trước</div>
+    <div><span>1</span>Đăng nhập</div>
+    <div><span>2</span>Màn hình chính</div>
+    <div><span>3</span>Tìm đúng chỗ cần sửa</div>
+    <div><span>4</span>Sửa chữ trên một trang</div>
+    <div><span>5</span>Các "khối nội dung" của trang</div>
+    <div><span>6</span>Thêm, xoá, sắp xếp khối</div>
+    <div><span>7</span>Thay ảnh</div>
+    <div><span>8</span>Nội dung riêng cho điện thoại</div>
+    <div><span>9</span>Lưu và Xuất bản</div>
+    <div><span>10</span>Quản lý sản phẩm</div>
+    <div><span>11</span>Viết bài Blog</div>
+    <div><span>12</span>Menu, chân trang, thông tin chung, icon</div>
+    <div><span>13</span>Cài đặt cửa hàng &amp; QR thanh toán</div>
+    <div><span>14</span>Xử lý đơn hàng (thanh toán thủ công)</div>
+    <div><span>15</span>Lời nhắn liên hệ &amp; người đăng ký nhận tin</div>
+    <div><span>16</span>Thư viện ảnh (Media Library)</div>
+    <div><span>17</span>Đổi mật khẩu</div>
+    <div><span>18</span>Lỗi thường gặp &amp; cách xử lý</div>
+    <div><span>19</span>Danh sách kiểm tra trước khi xuất bản</div>
+  </div>
+
+  <h2 style="margin-top:18pt">0. Những điều cần biết trước</h2>
+  <p>Website TOP WELL TEA gồm 2 phần:</p>
+  <ul>
+    <li><b>Website</b> – trang khách hàng nhìn thấy và đặt mua trà.</li>
+    <li><b>Trang quản trị (gọi tắt là "Admin", phần mềm tên Strapi)</b> – nơi bạn đăng nhập để sửa chữ, thay ảnh, thêm sản phẩm, viết bài và xử lý đơn hàng. Mọi thứ sửa ở Admin sẽ hiện lên Website <b>ngay sau khi bấm Xuất bản</b> (tải lại trang web là thấy).</li>
+  </ul>
+
+  <h3>4 khái niệm quan trọng</h3>
+  <table class="grid">
+    <tr><th style="width:26%">Khái niệm</th><th>Giải thích dễ hiểu</th></tr>
+    <tr><td><b>Lưu</b> (nút <span class="btn">Lưu</span>)</td><td>Cất bản nháp lại. <b>Khách chưa nhìn thấy</b> thay đổi này. Giống như bấm "Lưu" trong Word.</td></tr>
+    <tr><td><b>Xuất bản</b> (nút <span class="btn">Xuất bản</span>)</td><td>Đưa nội dung lên website cho khách xem. <b>Chỉ khi bấm Xuất bản thì website mới thay đổi.</b></td></tr>
+    <tr><td><b>Khối nội dung</b> (section)</td><td>Mỗi trang được xếp từ nhiều khối chồng lên nhau: banner, câu chuyện thương hiệu, sản phẩm nổi bật… Bạn sửa chữ/ảnh trong từng khối, thêm, xoá hoặc đổi thứ tự khối.</td></tr>
+    <tr><td><b>Bản điện thoại</b></td><td>Một số ô có thêm bản "… trên mobile" (ngắn gọn hơn cho màn hình điện thoại). <b>Để trống thì điện thoại dùng nội dung bản máy tính.</b> Xem mục 8.</td></tr>
+  </table>
+
+  <h3>Từ điển các nút tiếng Anh bạn sẽ gặp</h3>
+  <p>Admin phần lớn là tiếng Việt, nhưng một số nút vẫn là tiếng Anh:</p>
+  <table class="grid">
+    <tr><th>Chữ trên nút</th><th>Nghĩa</th><th>Chữ trên nút</th><th>Nghĩa</th></tr>
+    <tr><td><span class="btn">Create new entry</span></td><td>Tạo mục mới</td><td><span class="btn">Quay lại</span></td><td>Về danh sách</td></tr>
+    <tr><td><span class="btn">Add an entry</span></td><td>Thêm một dòng / thẻ</td><td><span class="btn">Add a component to…</span></td><td>Thêm một khối</td></tr>
+    <tr><td><span class="btn">Xóa</span> / 🗑</td><td>Xoá</td><td>⠿ (6 chấm)</td><td>Kéo để đổi vị trí</td></tr>
+    <tr><td><span class="btn">DRAFT</span></td><td>Bản nháp (đang sửa)</td><td><span class="btn">PUBLISHED</span></td><td>Bản đang hiện trên web</td></tr>
+    <tr><td><span class="btn">Browse</span></td><td>Chọn ảnh có sẵn</td><td><span class="btn">Add more assets</span></td><td>Tải thêm ảnh từ máy</td></tr>
+    <tr><td><span class="btn">Hoàn tất</span></td><td>Xong / xác nhận</td><td><span class="btn">Hủy</span></td><td>Huỷ</td></tr>
+    <tr><td><span class="btn">Add or create a relation</span></td><td>Chọn mục liên kết (danh mục, cách pha…)</td><td><span class="btn">No entry yet. Click to add one.</span></td><td>Đang trống, bấm để thêm</td></tr>
+    <tr><td><span class="btn">Unpublish</span></td><td>Gỡ khỏi web (ẩn)</td><td><span class="btn">Bộ lọc</span> / <span class="btn">Search</span></td><td>Lọc / tìm kiếm</td></tr>
+  </table>
+  <div class="box warn"><b class="t">⚠ Những mục KHÔNG nên đụng vào</b>
+    Ở thanh icon bên trái có <b>Content-Type Builder</b> (hình bố cục), <b>Deploy</b> (đám mây), <b>Chợ ứng dụng</b> (giỏ hàng) và <b>Cài đặt</b> (bánh răng). Đây là phần kỹ thuật – <b>không bấm vào</b> để tránh làm hỏng cấu trúc website. Trong danh sách nội dung, mục <b>User</b> cũng không dùng tới.</div>
+</section>
+
+<!-- ============ 1. ĐĂNG NHẬP ============ -->
+<section class="chapter">
+  <h2>1. Đăng nhập</h2>
+  <ol class="steps">
+    <li>Mở trình duyệt (Chrome, Safari, Edge…), gõ địa chỉ trang quản trị vào thanh địa chỉ rồi nhấn Enter. Nếu giao diện đang là tiếng Anh, chọn <b>Tiếng Việt</b> ở góc trên bên phải.</li>
+    <li>Nhập <b>Email</b> được cấp.</li>
+    <li>Nhập <b>Mật khẩu</b>.</li>
+    <li>Bấm <span class="btn">Đăng nhập</span>.</li>
+  </ol>
+  <figure><img src="img/01-login.jpg"><figcaption>Màn hình đăng nhập</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Mẹo</b>Tick <b>Ghi nhớ tôi</b> để không phải đăng nhập lại mỗi ngày trên máy của bạn. Không tick trên máy dùng chung.</div>
+  <div class="box note"><b class="t">ℹ Quên mật khẩu?</b>Bấm <b>Quên mật khẩu?</b> dưới nút đăng nhập, hoặc nhờ người quản trị chính cấp lại.</div>
+
+</section>
+
+<section class="chapter">
+  <h2>2. Màn hình chính</h2>
+  <p>Sau khi đăng nhập, bạn thấy trang chào mừng với danh sách nội dung vừa sửa và vừa xuất bản. Thanh icon bên trái là menu chính:</p>
+  <ul class="plain">
+    <li><span class="num">1</span><b>Content Manager</b> (cây bút) – nơi sửa <b>toàn bộ</b> nội dung website. Bạn sẽ dùng mục này 95% thời gian.</li>
+    <li><span class="num">2</span><b>Media Library</b> (khung ảnh) – kho ảnh, icon, logo.</li>
+    <li><span class="num">3</span><b>Avatar của bạn</b> (góc dưới) – hồ sơ, đổi mật khẩu, đăng xuất.</li>
+  </ul>
+  <figure><img src="img/02-dashboard.jpg"><figcaption>Màn hình chính sau khi đăng nhập</figcaption></figure>
+</section>
+
+<!-- ============ 3. TÌM ĐÚNG CHỖ ============ -->
+<section class="chapter">
+  <h2>3. Tìm đúng chỗ cần sửa</h2>
+  <p>Bấm <b>Content Manager</b>. Cột bên trái chia làm 2 nhóm:</p>
+  <ul class="plain">
+    <li><span class="num">1</span><b>COLLECTION TYPES</b> – các <b>danh sách nhiều mục</b>: Sản phẩm, Bài viết, Đơn hàng, Lời nhắn liên hệ…</li>
+    <li><span class="num">2</span><b>SINGLE TYPES</b> – mỗi mục là <b>một trang</b> hoặc <b>một phần chung</b> của website: Trang chủ, Về chúng tôi, Footer, Cài đặt cửa hàng…</li>
+    <li><span class="num">3</span><span class="btn">Create new entry</span> – tạo mục mới trong danh sách đang mở.</li>
+    <li><span class="num">4</span>Kính lúp / <span class="btn">Bộ lọc</span> – tìm nhanh một mục.</li>
+  </ul>
+  <figure><img src="img/03-content-manager.jpg"><figcaption>Content Manager – danh sách Bài viết</figcaption></figure>
+
+  <h3>Bảng tra: muốn sửa phần nào trên website thì vào đâu?</h3>
+  <table class="grid">
+    <tr><th style="width:38%">Trên website</th><th>Vào mục (Content Manager)</th></tr>
+    <tr><td>Trang chủ <code>/</code></td><td><b>Trang chủ</b></td></tr>
+    <tr><td>Cửa hàng <code>/cua-hang</code></td><td><b>Cửa hàng</b> (banner, bộ lọc) – sản phẩm lấy từ <b>Sản phẩm</b></td></tr>
+    <tr><td>Trang một sản phẩm</td><td><b>Sản phẩm</b> → chọn sản phẩm. Chữ dùng chung mọi trang sản phẩm (nút "Thêm vào giỏ", tiêu đề "Sản phẩm liên quan"…): <b>Trang chi tiết sản phẩm (chung)</b></td></tr>
+    <tr><td>Về chúng tôi <code>/ve-chung-toi</code></td><td><b>Về chúng tôi</b></td></tr>
+    <tr><td>Blog <code>/blog</code> và từng bài</td><td><b>Blog</b> (trang danh sách) · <b>Bài viết</b> (từng bài) · <b>Trang chi tiết bài viết (chung)</b></td></tr>
+    <tr><td>Liên hệ <code>/lien-he</code></td><td><b>Liên hệ</b></td></tr>
+    <tr><td>Giỏ hàng · Thanh toán · Đặt hàng thành công</td><td><b>Giỏ hàng</b> · <b>Thanh toán</b> (cả phương thức thanh toán) · <b>Đặt hàng thành công</b></td></tr>
+    <tr><td>Tra cứu đơn · Tìm kiếm · Trang 404</td><td><b>Tra cứu đơn hàng</b> · <b>Tìm kiếm</b> · <b>Trang 404</b></td></tr>
+    <tr><td>Menu trên cùng, menu điện thoại</td><td><b>Header &amp; menu</b></td></tr>
+    <tr><td>Chân trang</td><td><b>Footer</b></td></tr>
+    <tr><td>Logo, tên, hotline, email, địa chỉ, mạng xã hội, SEO mặc định</td><td><b>Thông tin chung</b></td></tr>
+    <tr><td>Các icon nhỏ (menu, giỏ hàng, mũi tên…)</td><td><b>Bộ icon</b></td></tr>
+    <tr><td>Phí ship, mẫu email, <b>ảnh QR thanh toán</b>, chữ thông báo</td><td><b>Cài đặt cửa hàng</b></td></tr>
+    <tr><td>Danh mục sản phẩm · Cách pha · Chuyên mục bài viết</td><td><b>Danh mục sản phẩm</b> · <b>Cách pha</b> · <b>Chuyên mục bài viết</b></td></tr>
+  </table>
+</section>
+
+<!-- ============ 4. SỬA CHỮ ============ -->
+<section class="chapter">
+  <h2>4. Sửa chữ trên một trang</h2>
+  <p>Ví dụ sửa <b>Trang chủ</b>: Content Manager → <b>SINGLE TYPES</b> → <b>Trang chủ</b>.</p>
+  <ol class="steps">
+    <li>Đang ở tab <span class="btn">DRAFT</span> (bản nháp) – luôn sửa ở đây. Tab <span class="btn">PUBLISHED</span> chỉ để xem bản đang hiện trên web.</li>
+    <li>Bấm vào ô cần sửa và gõ nội dung mới, ví dụ <span class="field">Tiêu đề</span>.</li>
+    <li><b>Tối ưu tìm kiếm (SEO)</b> – tiêu đề và mô tả hiện trên Google. Dưới mỗi ô có dòng gợi ý màu xám.</li>
+    <li>Sửa xong bấm <span class="btn">Lưu</span> rồi <span class="btn">Xuất bản</span> (xem mục 9).</li>
+  </ol>
+  <figure><img src="img/04-page-editor.jpg"><figcaption>Trang chủ – phần đầu trang sửa</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Đọc dòng chữ xám dưới ô</b>Hầu hết các ô đều có gợi ý ngay bên dưới: nên viết bao nhiêu ký tự, dùng biến gì (<code>{code}</code>, <code>{year}</code>…), để trống thì sao.</div>
+</section>
+
+<!-- ============ 5. KHỐI NỘI DUNG ============ -->
+<section class="chapter">
+  <h2>5. Các "khối nội dung" của trang</h2>
+  <p>Kéo xuống dưới phần SEO là danh sách <b>Các khối nội dung</b> – mỗi dòng là một khối hiện trên trang, <b>theo đúng thứ tự từ trên xuống</b>.</p>
+  <ul class="plain">
+    <li><span class="num">1</span>Số khối trên trang, ví dụ <b>Các khối nội dung (7)</b>.</li>
+    <li><span class="num">2</span>Một khối – bấm vào tên khối (hoặc mũi tên ▾) để mở ra sửa.</li>
+    <li><span class="num">3</span>🗑 Xoá khối.</li>
+    <li><span class="num">4</span>⠿ Giữ chuột và kéo lên/xuống để đổi vị trí khối.</li>
+    <li><span class="num">5</span>⋯ Thêm thao tác: nhân đôi khối, chuyển lên/xuống.</li>
+  </ul>
+  <figure><img src="img/05-sections.jpg"><figcaption>Danh sách khối của Trang chủ</figcaption></figure>
+  <p>Mở một khối sẽ thấy các ô của khối đó:</p>
+  <ul class="plain">
+    <li><span class="num">1</span>Tên khối đang mở, ví dụ <b>Khối ảnh + nội dung – CÂU CHUYỆN THƯƠNG HIỆU</b>.</li>
+    <li><span class="num">2</span>Các ô chữ: dòng chữ nhỏ phía trên, tiêu đề, nội dung…</li>
+  </ul>
+  <figure><img src="img/06-section-open.jpg"><figcaption>Một khối đã mở</figcaption></figure>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Các ô thường gặp trong một khối</h3>
+  <ul class="plain">
+    <li><span class="num">1</span><b>Liên kết</b> (nút / chữ "TÌM HIỂU THÊM"): <span class="field">Nhãn</span> là chữ hiển thị, <span class="field">Đường dẫn (URL)</span> là trang sẽ mở. Trang trong website ghi dạng <code>/cua-hang</code>; trang ngoài ghi đầy đủ <code>https://…</code>.</li>
+    <li><span class="num">2</span><span class="field">Nhãn trên mobile</span> – chữ ngắn hơn cho điện thoại (để trống = dùng chữ bản máy tính).</li>
+    <li><span class="num">3</span><span class="field">Ẩn trên mobile</span> – chọn <b>ĐÚNG</b> nếu không muốn mục này hiện trên điện thoại.</li>
+  </ul>
+  <figure><img src="img/07-section-fields.jpg"><figcaption>Liên kết và các tuỳ chọn cho điện thoại</figcaption></figure>
+
+  <h3>Các loại khối có sẵn</h3>
+  <table class="grid">
+    <tr><th style="width:32%">Tên khối</th><th>Dùng để</th></tr>
+    <tr><td><b>Banner trình chiếu</b></td><td>Banner lớn đầu Trang chủ, nhiều slide tự chuyển (đặt số giây ở ô "Tự chuyển slide sau").</td></tr>
+    <tr><td><b>Banner trang</b></td><td>Ảnh + tiêu đề đầu các trang con (Cửa hàng, Blog, Liên hệ…).</td></tr>
+    <tr><td><b>Khối ảnh + nội dung</b></td><td>Ảnh một bên, chữ một bên. Chọn vị trí ảnh, màu nền, bố cục.</td></tr>
+    <tr><td><b>Triết lý thương hiệu</b> · <b>Quy trình (Từ lá đến tách)</b></td><td>Các khối riêng của Trang chủ.</td></tr>
+    <tr><td><b>Sản phẩm nổi bật</b></td><td>Chọn các sản phẩm muốn giới thiệu ở Trang chủ.</td></tr>
+    <tr><td><b>Ảnh toàn khổ</b> · <b>Trích dẫn</b></td><td>Một ảnh rộng hết màn hình · một câu trích dẫn lớn.</td></tr>
+    <tr><td><b>Kêu gọi hành động</b></td><td>Dải tiêu đề + nút (ví dụ "Khám phá bộ sưu tập").</td></tr>
+    <tr><td><b>Lưới thẻ</b> · <b>Câu hỏi thường gặp</b> · <b>Đăng ký nhận tin</b></td><td>Các thẻ có icon · danh sách hỏi đáp · ô đăng ký email.</td></tr>
+  </table>
+</section>
+
+<!-- ============ 6. THÊM / XOÁ / SẮP XẾP ============ -->
+<section class="chapter">
+  <h2>6. Thêm, xoá, sắp xếp khối</h2>
+  <h3>Thêm khối mới</h3>
+  <ol class="steps">
+    <li>Kéo xuống cuối danh sách khối, bấm <span class="btn">Add a component to Các khối nội dung</span>. Bảng <b>Pick one component</b> hiện ra. Nhóm <b>Home</b> là các khối riêng của Trang chủ.</li>
+    <li>Nhóm <b>Sections</b> là các khối dùng chung cho mọi trang (Banner trang, Khối ảnh + nội dung, Trích dẫn…). Bấm vào khối cần thêm – khối mới xuất hiện <b>ở cuối trang</b>, điền nội dung rồi kéo ⠿ lên đúng vị trí.</li>
+    <li>Đổi ý thì bấm <span class="btn">Đóng</span>.</li>
+  </ol>
+  <figure><img src="img/10-add-section.jpg"><figcaption>Chọn loại khối muốn thêm</figcaption></figure>
+  <h3>Xoá và sắp xếp</h3>
+  <ul>
+    <li><b>Xoá:</b> bấm 🗑 ở dòng khối đó. Khối chỉ thật sự mất khỏi web sau khi <b>Lưu + Xuất bản</b>.</li>
+    <li><b>Đổi thứ tự:</b> giữ ⠿ rồi kéo, hoặc dùng ⋯ → chuyển lên / xuống.</li>
+    <li>Danh sách bên trong một khối (các slide, các thẻ, các câu hỏi…) cũng thêm bằng <span class="btn">Add an entry</span>, xoá bằng 🗑 và kéo ⠿ y như vậy.</li>
+  </ul>
+  <div class="box warn"><b class="t">⚠ Lỡ tay xoá?</b>Nếu <b>chưa bấm Lưu</b>, chỉ cần rời trang và chọn không lưu (hoặc tải lại trang) – nội dung cũ vẫn còn nguyên.</div>
+</section>
+
+<!-- ============ 7. THAY ẢNH ============ -->
+<section class="chapter">
+  <h2>7. Thay ảnh</h2>
+  <p>Mọi ô ảnh đều có 4 nút nhỏ khi rê chuột vào ảnh:</p>
+  <ul class="plain">
+    <li><span class="num">1</span><b>+</b> chọn / tải ảnh khác · 🔗 sao chép link ảnh · 🗑 bỏ ảnh · ✏ sửa thông tin hoặc cắt ảnh.</li>
+    <li><span class="num">2</span><span class="field">Mô tả ảnh (alt)</span> – mô tả ngắn nội dung ảnh, giúp Google hiểu ảnh và hỗ trợ người khiếm thị. <b>Nên luôn điền.</b></li>
+    <li><span class="num">3</span>Tuỳ chọn trình bày của khối: vị trí ảnh (trái/phải), bố cục, màu nền, cỡ tiêu đề.</li>
+    <li><span class="num">4</span>Các ô "… trên mobile" của khối (xem mục 8).</li>
+  </ul>
+  <figure><img src="img/08-image-field.jpg"><figcaption>Ô ảnh và các tuỳ chọn của khối</figcaption></figure>
+  <h3>Chọn ảnh có sẵn hoặc tải ảnh mới</h3>
+  <ol class="steps">
+    <li>Bấm <b>+</b> ở ô ảnh → tab <span class="btn">BROWSE</span> hiện toàn bộ ảnh trong thư viện.</li>
+    <li>Ảnh mới từ máy: bấm <span class="btn">Add more assets</span> → chọn file (hoặc kéo thả).</li>
+    <li>Tick chọn ảnh muốn dùng.</li>
+    <li>Bấm <span class="btn">Hoàn tất</span>.</li>
+  </ol>
+  <figure><img src="img/09-media-picker.jpg"><figcaption>Hộp chọn ảnh</figcaption></figure>
+</section>
+
+<!-- ============ 8. MOBILE ============ -->
+<section class="chapter">
+  <h2>8. Nội dung riêng cho điện thoại</h2>
+  <p>Màn hình điện thoại hẹp nên một số tiêu đề, mô tả cần <b>ngắn hơn</b> bản máy tính. Các ô có chữ <b>"… trên mobile"</b> dùng cho việc này:</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Tiêu đề trên mobile</span> – ví dụ bản máy tính "Hiện đại hoá trải nghiệm thưởng trà", bản điện thoại "Thưởng trà hiện đại".</li>
+    <li><span class="num">2</span><span class="field">Nội dung trên mobile</span> – đoạn văn rút gọn.</li>
+    <li><span class="num">3</span>Nút thêm khối nằm ngay dưới khối cuối cùng.</li>
+  </ul>
+  <figure><img src="img/12-mobile-fields.jpg"><figcaption>Các ô dành riêng cho điện thoại</figcaption></figure>
+  <table class="grid">
+    <tr><th style="width:35%">Ô</th><th>Ý nghĩa</th></tr>
+    <tr><td>"… trên mobile" (tiêu đề, mô tả, nhãn…)</td><td>Điện thoại hiển thị chữ này. <b>Để trống = dùng chữ bản máy tính.</b></td></tr>
+    <tr><td><span class="field">Ẩn trên mobile</span></td><td>Mục không hiện trên điện thoại (ví dụ một link phụ ở chân trang).</td></tr>
+    <tr><td><span class="field">Ẩn mô tả trên mobile</span></td><td>Chỉ ẩn phần mô tả, giữ tiêu đề.</td></tr>
+    <tr><td><span class="field">Đóng trên mobile</span> (Câu hỏi thường gặp)</td><td>Câu hỏi được "Mở sẵn" trên máy tính nhưng đóng lại trên điện thoại.</td></tr>
+  </table>
+  <div class="box tip"><b class="t">💡 Kiểm tra trên điện thoại</b>Sau khi xuất bản, mở website bằng điện thoại (hoặc thu nhỏ cửa sổ trình duyệt) để xem tiêu đề có bị xuống quá nhiều dòng không. Nếu có, điền bản ngắn vào ô "… trên mobile".</div>
+</section>
+
+<!-- ============ 9. LƯU & XUẤT BẢN ============ -->
+<section class="chapter">
+  <h2>9. Lưu và Xuất bản</h2>
+  <p>Ngay khi bạn sửa bất kỳ ô nào, hai nút bên phải sáng lên:</p>
+  <ol class="steps">
+    <li>Ô vừa sửa.</li>
+    <li><span class="btn">Xuất bản</span> – đưa thay đổi lên website. <b>Khách thấy ngay</b> (tải lại trang là thấy).</li>
+    <li><span class="btn">Lưu</span> – chỉ lưu nháp, website <b>chưa</b> đổi. Dùng khi đang sửa dở muốn làm tiếp sau.</li>
+  </ol>
+  <figure><img src="img/11-modified.jpg"><figcaption>Đã sửa nhưng chưa lưu – hai nút sáng lên</figcaption></figure>
+  <table class="grid">
+    <tr><th style="width:30%">Nhãn trạng thái</th><th>Nghĩa</th></tr>
+    <tr><td><span class="btn">Draft</span></td><td>Chưa từng xuất bản – khách chưa thấy.</td></tr>
+    <tr><td><span class="btn">Published</span></td><td>Đang hiện trên web, không có thay đổi chờ.</td></tr>
+    <tr><td><span class="btn">Modified</span></td><td>Đã lưu nháp có thay đổi nhưng <b>chưa xuất bản</b> – web vẫn hiện bản cũ.</td></tr>
+  </table>
+  <div class="box note"><b class="t">ℹ Gỡ một nội dung khỏi web</b>Bấm ⋯ cạnh nút Xuất bản → <b>Unpublish</b>. Nội dung vẫn còn trong Admin, chỉ không hiện trên web nữa (dùng cho sản phẩm tạm ngừng bán, bài viết cần sửa lớn).</div>
+</section>
+
+<!-- ============ 10. SẢN PHẨM ============ -->
+<section class="chapter">
+  <h2>10. Quản lý sản phẩm</h2>
+  <p>Content Manager → <b>COLLECTION TYPES</b> → <b>Sản phẩm</b>.</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="btn">Create new entry</span> – thêm sản phẩm mới.</li>
+    <li><span class="num">2</span>Bấm vào một dòng để sửa sản phẩm đó.</li>
+    <li><span class="num">3</span><b>Published</b> = đang bán trên web.</li>
+  </ul>
+  <figure><img src="img/13-product-list.jpg"><figcaption>Danh sách sản phẩm</figcaption></figure>
+  <h3>Thông tin cơ bản</h3>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Tên sản phẩm</span>.</li>
+    <li><span class="num">2</span><span class="field">Đường dẫn (slug)</span> – tự tạo từ tên (bấm ⟳ để tạo lại). Chỉ chữ thường không dấu và dấu gạch ngang, ví dụ <code>tra-o-long</code>. <b>Không đổi slug của sản phẩm đang bán</b> vì link cũ sẽ hỏng.</li>
+    <li><span class="num">3</span><span class="field">Danh mục</span> – bấm <span class="btn">Add or create a relation</span> để chọn (Gói trà 8g, Nắp pha trà, Combo…).</li>
+    <li><span class="num">4</span><span class="field">Cách pha</span> – chọn một hoặc nhiều (Pha nóng, Ủ lạnh…).</li>
+    <li><span class="num">5</span><span class="field">Giá (₫)</span> – nhập số, không dấu chấm. Ví dụ <code>145000</code>.</li>
+  </ul>
+  <figure><img src="img/14-product-edit.jpg"><figcaption>Thông tin cơ bản của sản phẩm</figcaption></figure>
+</section>
+
+<section class="chapter">
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Còn hàng</span> – chọn <b>SAI</b> khi hết hàng: sản phẩm vẫn hiện nhưng khách không đặt được.</li>
+    <li><span class="num">2</span><span class="field">Mô tả ngắn</span> – đoạn giới thiệu dưới tên sản phẩm.</li>
+    <li><span class="num">3</span><b>Ảnh sản phẩm</b> – danh sách ảnh (ảnh đầu tiên là ảnh đại diện).</li>
+  </ul>
+  <figure><img src="img/15-product-images.jpg"><figcaption>Tình trạng hàng, mô tả, ảnh sản phẩm</figcaption></figure>
+  <ul class="plain">
+    <li><span class="num">1</span>Mỗi dòng là một ảnh, bấm để mở và đổi ảnh / mô tả ảnh. Kéo ⠿ để đổi thứ tự.</li>
+    <li><span class="num">2</span>🗑 Bỏ một ảnh.</li>
+    <li><span class="num">3</span><span class="btn">Add an entry</span> – thêm ảnh.</li>
+  </ul>
+  <figure><img src="img/16-product-gallery.jpg"><figcaption>Bộ ảnh của sản phẩm</figcaption></figure>
+  <div class="box note"><b class="t">ℹ Phía dưới còn</b><b>Thông điệp chính</b>, <b>Dòng nổi bật</b>, <b>Thông số</b> (Quy cách, Hương, Vị…) và <b>Các khối chi tiết</b> (Hướng dẫn thưởng trà, Các bước sử dụng, Câu hỏi thường gặp) – sửa giống các khối ở mục 5–6. Sản phẩm muốn hiện ở Trang chủ thì vào <b>Trang chủ</b> → khối <b>Sản phẩm nổi bật</b> → chọn sản phẩm.</div>
+</section>
+
+<!-- ============ 11. BLOG ============ -->
+<section class="chapter">
+  <h2>11. Viết bài Blog</h2>
+  <p>Content Manager → <b>Bài viết</b> → <span class="btn">Create new entry</span> (bài mới) hoặc bấm vào bài cần sửa.</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Tiêu đề</span> – slug tự tạo theo tiêu đề.</li>
+    <li><span class="num">2</span><span class="field">Danh mục</span> – chuyên mục bài viết (Câu chuyện trà, Kiến thức, Hot Brew…).</li>
+    <li><span class="num">3</span><span class="field">Tóm tắt</span> – hiện trên thẻ bài ở trang Blog và kết quả Google.</li>
+    <li><span class="num">4</span><span class="field">Ảnh bìa</span> + mô tả ảnh.</li>
+  </ul>
+  <figure><img src="img/17-article-edit.jpg"><figcaption>Thông tin bài viết</figcaption></figure>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Viết thân bài trong ô "Nội dung bài viết"</h3>
+  <ul class="plain">
+    <li><span class="num">1</span>Thanh công cụ: kiểu đoạn · <b>B</b> đậm · <i>I</i> nghiêng · gạch chân · gạch ngang · mã · 🔗 link · danh sách chấm · danh sách số.</li>
+    <li><span class="num">2</span>Vùng soạn thảo – gõ hoặc dán chữ như trong Word.</li>
+  </ul>
+  <figure><img src="img/18-article-content.jpg"><figcaption>Trình soạn thảo nội dung bài viết</figcaption></figure>
+  <ul class="plain">
+    <li><span class="num">1</span>Đặt con trỏ vào đoạn cần đổi, bấm ô kiểu đoạn (đang ghi "Văn bản").</li>
+    <li><span class="num">2</span>Chọn <b>Tiêu đề 2</b> cho tiêu đề phụ lớn, <b>Tiêu đề 3</b> cho tiêu đề nhỏ. Kéo xuống còn có <b>Trích dẫn</b>, <b>Ảnh</b>, <b>Danh sách</b>.</li>
+  </ul>
+  <figure><img src="img/19-block-menu.jpg"><figcaption>Chọn kiểu đoạn</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Viết chuẩn SEO</b>Mỗi bài chỉ có một tiêu đề chính (là ô Tiêu đề). Trong thân bài dùng <b>Tiêu đề 2 / Tiêu đề 3</b> cho các phần, không dùng Tiêu đề 1. Điền <b>Tối ưu tìm kiếm (SEO)</b> ở cuối bài nếu muốn tiêu đề Google khác tiêu đề bài.</div>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Tạo bài mới</h3>
+  <ol class="steps">
+    <li>Nhập <span class="field">Tiêu đề</span>.</li>
+    <li>Kiểm tra <span class="field">Đường dẫn (slug)</span> – bấm ⟳ để tạo lại từ tiêu đề.</li>
+    <li>Điền tóm tắt, chọn danh mục, ảnh bìa, nội dung… rồi bấm <span class="btn">Xuất bản</span> (hoặc <span class="btn">Lưu</span> để làm tiếp sau).</li>
+  </ol>
+  <figure><img src="img/34-article-new.jpg"><figcaption>Form tạo bài viết mới</figcaption></figure>
+  <div class="box note"><b class="t">ℹ Bài nổi bật</b>Bật <span class="field">Bài nổi bật</span> = ĐÚNG để bài hiện ở vị trí lớn đầu trang Blog.</div>
+</section>
+
+<!-- ============ 12. MENU, FOOTER, THÔNG TIN CHUNG ============ -->
+<section class="chapter">
+  <h2>12. Menu, chân trang, thông tin chung, icon</h2>
+  <h3>Header &amp; menu</h3>
+  <ul class="plain">
+    <li><span class="num">1</span><b>Menu bên trái</b> của logo – mỗi dòng là một mục (nhãn + đường dẫn).</li>
+    <li><span class="num">2</span><b>Menu bên phải</b> của logo.</li>
+    <li><span class="num">3</span>Các nhãn nút (tìm kiếm, giỏ hàng…). Kéo xuống còn có phần <b>menu điện thoại</b> (liên kết, nút "Mua trà ngay").</li>
+  </ul>
+  <figure><img src="img/26-header.jpg"><figcaption>Header &amp; menu</figcaption></figure>
+  <h3>Footer (chân trang)</h3>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Mô tả</span> – đoạn giới thiệu ngắn dưới logo.</li>
+    <li><span class="num">2</span><b>Số cột</b> – các cột liên kết (CỬA HÀNG, KHÁM PHÁ, LIÊN HỆ). Mở một cột để sửa tiêu đề và các link bên trong.</li>
+    <li><span class="num">3</span><span class="field">Dòng bản quyền</span> – <code>{year}</code> tự đổi thành năm hiện tại.</li>
+  </ul>
+  <figure><img src="img/27-footer.jpg"><figcaption>Footer</figcaption></figure>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Thông tin chung</h3>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Tên website</span> và <span class="field">Địa chỉ website</span> (dùng cho SEO, link chia sẻ).</li>
+    <li><span class="num">2</span><span class="field">Logo</span> + mô tả ảnh. Kéo xuống còn <b>Favicon</b> (icon trên tab trình duyệt), hotline, email, địa chỉ, <b>Mạng xã hội</b> và <b>SEO mặc định</b>.</li>
+    <li><span class="num">3</span><span class="field">Khẩu hiệu</span>.</li>
+  </ul>
+  <figure><img src="img/28-global.jpg"><figcaption>Thông tin chung</figcaption></figure>
+  <h3>Bộ icon</h3>
+  <p>Toàn bộ icon nhỏ của website (menu, đóng, tìm kiếm, giỏ hàng, mũi tên, +/−, ngọn lửa, giọt nước…). Muốn đổi icon: bấm <b>+</b> ở ô icon đó và chọn file <b>SVG</b> mới. Icon tự đổi màu theo nền nên không cần làm nhiều bản màu.</p>
+  <figure><img src="img/29-icons.jpg"><figcaption>Bộ icon</figcaption></figure>
+</section>
+
+<!-- ============ 13. CÀI ĐẶT CỬA HÀNG ============ -->
+<section class="chapter">
+  <h2>13. Cài đặt cửa hàng &amp; QR thanh toán</h2>
+  <p>Content Manager → <b>Cài đặt cửa hàng</b>.</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Phí vận chuyển (₫)</span> – phí ship mặc định.</li>
+    <li><span class="num">2</span><span class="field">Miễn phí ship cho đơn từ (₫)</span> – đơn có tạm tính từ số này trở lên được miễn ship.</li>
+    <li><span class="num">3</span><span class="field">Tiền tố mã đơn</span> – mã đơn có dạng <code>TWT-2026-0001</code>.</li>
+  </ul>
+  <figure><img src="img/20-settings-top.jpg"><figcaption>Cài đặt cửa hàng – phần đầu</figcaption></figure>
+  <div class="box note"><b class="t">ℹ Mẫu email</b>Các ô "Email khách…" dùng biến trong ngoặc nhọn, ví dụ <code>{name}</code> tên khách, <code>{code}</code> mã đơn, <code>{items}</code> danh sách sản phẩm, <code>{total}</code> tổng tiền, <code>{paymentNote}</code> hướng dẫn chuyển khoản. Danh sách biến ghi ngay dưới ô.</div>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Ảnh QR chuyển khoản</h3>
+  <p>Kéo xuống dưới các chữ thông báo trên web (giỏ hàng, lỗi…) và các <b>mẫu email</b> là phần chuyển khoản:</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Chuyển khoản: tiêu đề</span> – dòng hiện trên ảnh QR, ví dụ "Quét mã QR để chuyển khoản".</li>
+    <li><span class="num">2</span><span class="field">Chuyển khoản: ghi chú</span> – <code>{code}</code> tự thay bằng mã đơn để khách ghi vào nội dung chuyển khoản.</li>
+    <li><span class="num">3</span><span class="field">Ảnh QR thanh toán</span> – bấm vào ô và tải lên ảnh QR tài khoản ngân hàng của shop.</li>
+  </ul>
+  <figure><img src="img/21-bank-qr.jpg"><figcaption>Phần chuyển khoản và ảnh QR</figcaption></figure>
+  <div class="box warn"><b class="t">⚠ Kiểm tra QR trước khi xuất bản</b>Dùng app ngân hàng quét thử ảnh QR, đúng <b>tên và số tài khoản</b> của shop rồi mới bấm Xuất bản. Khi chưa có ảnh QR, trang cảm ơn chỉ hiện dòng ghi chú.</div>
+</section>
+
+<!-- ============ 14. ĐƠN HÀNG ============ -->
+<section class="chapter">
+  <h2>14. Xử lý đơn hàng (thanh toán thủ công)</h2>
+  <p>Website <b>không tự động trừ tiền</b>. Khách chọn <b>COD</b> (trả khi nhận hàng) hoặc <b>Chuyển khoản</b> (quét QR, ghi mã đơn vào nội dung). Shop tự kiểm tra và cập nhật trạng thái đơn trong Admin.</p>
+  <ul class="plain">
+    <li><span class="num">1</span><b>Mã đơn hàng</b> – bấm để mở đơn.</li>
+    <li><span class="num">2</span><b>Trạng thái đơn hàng</b>: <code>pending</code> chờ xử lý · <code>confirmed</code> đã xác nhận · <code>shipping</code> đang giao · <code>completed</code> hoàn tất · <code>cancelled</code> đã huỷ.</li>
+    <li><span class="num">3</span><b>Trạng thái thanh toán</b>: <code>unpaid</code> chưa trả · <code>paid</code> đã trả · <code>refunded</code> đã hoàn tiền.</li>
+    <li><span class="num">4</span><span class="btn">Bộ lọc</span> – ví dụ lọc các đơn đang <code>pending</code>.</li>
+  </ul>
+  <figure><img src="img/22-orders.jpg"><figcaption>Danh sách đơn hàng</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Biết có đơn mới</b>Mỗi đơn mới, website gửi email báo về hộp thư của shop (khi đã cấu hình email) và đơn hiện ở đầu danh sách với trạng thái <code>pending</code>.</div>
+</section>
+
+<section class="chapter">
+  <ul class="plain">
+    <li><span class="num">1</span><span class="field">Trạng thái đơn hàng</span> – đổi ở đây (gợi ý thứ tự ngay dưới ô).</li>
+    <li><span class="num">2</span>Thông tin khách: tên, email, điện thoại, địa chỉ, ghi chú, phương thức thanh toán, sản phẩm trong đơn.</li>
+    <li><span class="num">3</span>Sửa xong bấm <span class="btn">Lưu</span> (đơn hàng không có nút Xuất bản).</li>
+  </ul>
+  <figure><img src="img/23-order-edit.jpg"><figcaption>Chi tiết một đơn hàng</figcaption></figure>
+  <ul class="plain">
+    <li><span class="num">1</span><b>Lịch sử trạng thái</b> – mỗi lần đổi trạng thái, bấm <span class="btn">Add an entry</span>, chọn trạng thái mới và thời điểm. Khách thấy các mốc này khi tra cứu đơn.</li>
+    <li><span class="num">2</span><span class="field">Trạng thái thanh toán</span> – đổi sang <code>paid</code> sau khi đã kiểm tra nhận được tiền.</li>
+    <li><span class="num">3</span><span class="field">Mã giao dịch</span> – ghi mã giao dịch ngân hàng để đối soát. Kèm <span class="field">Thời điểm thanh toán</span>.</li>
+  </ul>
+  <figure><img src="img/24-order-payment.jpg"><figcaption>Lịch sử trạng thái và thông tin thanh toán</figcaption></figure>
+</section>
+
+<section class="chapter">
+  <h3 style="margin-top:0">Quy trình xử lý một đơn</h3>
+  <table class="grid">
+    <tr><th style="width:24%">Khi nào</th><th>Làm gì trong Admin</th></tr>
+    <tr><td>Có đơn mới</td><td>Gọi / nhắn xác nhận với khách nếu cần. Đơn COD: đổi <b>Trạng thái đơn hàng</b> → <code>confirmed</code>, thêm dòng lịch sử <code>confirmed</code>, Lưu.</td></tr>
+    <tr><td>Khách chuyển khoản</td><td>Mở app ngân hàng, tìm khoản tiền có nội dung = <b>mã đơn</b> và đúng số tiền. Đúng thì: <b>Trạng thái thanh toán</b> → <code>paid</code>, ghi <b>Mã giao dịch</b> + <b>Thời điểm thanh toán</b>, <b>Trạng thái đơn hàng</b> → <code>confirmed</code>, thêm dòng lịch sử, Lưu.</td></tr>
+    <tr><td>Giao cho đơn vị vận chuyển</td><td><b>Trạng thái đơn hàng</b> → <code>shipping</code>, điền <b>Đơn vị giao hàng</b> và <b>Ngày giao dự kiến</b>, thêm dòng lịch sử <code>shipping</code>, Lưu.</td></tr>
+    <tr><td>Khách đã nhận hàng</td><td><code>completed</code> (đơn COD: đồng thời đổi thanh toán → <code>paid</code>), thêm dòng lịch sử, Lưu.</td></tr>
+    <tr><td>Huỷ đơn</td><td><code>cancelled</code>, ghi lý do vào ghi chú của dòng lịch sử. Đã nhận tiền thì hoàn lại cho khách và đổi thanh toán → <code>refunded</code>.</td></tr>
+  </table>
+  <p>Khách tự xem tiến trình đơn ở trang <b>Tra cứu đơn hàng</b> trên website (nhập mã đơn + email hoặc số điện thoại):</p>
+  <figure><img src="img/41-web-tracking.jpg"><figcaption>Khách tra cứu đơn trên website – các mốc lấy từ "Lịch sử trạng thái"</figcaption></figure>
+</section>
+
+<!-- ============ 15. LIÊN HỆ ============ -->
+<section class="chapter">
+  <h2>15. Lời nhắn liên hệ &amp; người đăng ký nhận tin</h2>
+  <p>Content Manager → <b>Lời nhắn liên hệ</b>: mọi tin nhắn khách gửi từ trang Liên hệ.</p>
+  <ul class="plain">
+    <li><span class="num">1</span>Bấm tên khách để đọc toàn bộ lời nhắn, email, số điện thoại.</li>
+    <li><span class="num">2</span><b>Trạng thái xử lý</b>: <code>new</code> mới · <code>handled</code> đã trả lời. Trả lời khách xong thì mở lời nhắn, đổi sang <code>handled</code> và bấm Lưu.</li>
+    <li><span class="num">3</span><span class="btn">Bộ lọc</span> – lọc các lời nhắn chưa xử lý.</li>
+  </ul>
+  <figure><img src="img/25-messages.jpg"><figcaption>Lời nhắn liên hệ</figcaption></figure>
+  <p>Mục <b>Người đăng ký nhận tin</b> là danh sách email khách để lại ở ô "Đăng ký nhận tin" (trang Blog, cuối bài viết), kèm trang khách đăng ký. Dùng danh sách này khi gửi bản tin hoặc chương trình ưu đãi.</p>
+</section>
+
+<!-- ============ 16. MEDIA LIBRARY ============ -->
+<section class="chapter">
+  <h2>16. Thư viện ảnh (Media Library)</h2>
+  <p>Bấm icon khung ảnh ở thanh bên trái. Đây là kho chung của mọi ảnh, icon, logo trên website.</p>
+  <ul class="plain">
+    <li><span class="num">1</span><span class="btn">New</span> – tải ảnh lên hoặc tạo thư mục.</li>
+    <li><span class="num">2</span><span class="btn">Filter</span> / <span class="btn">Search</span> – tìm ảnh theo tên.</li>
+    <li><span class="num">3</span>Bấm vào ảnh để xem chi tiết, sửa tên / mô tả, thay file hoặc tải về.</li>
+  </ul>
+  <figure><img src="img/30-media.jpg"><figcaption>Media Library</figcaption></figure>
+  <ul class="plain">
+    <li><span class="num">1</span>Bấm <span class="btn">New</span>.</li>
+    <li><span class="num">2</span><b>File upload</b> – chọn ảnh từ máy (có thể chọn nhiều ảnh một lúc).</li>
+    <li><span class="num">3</span><b>File upload from URL</b> – tải ảnh từ một đường link.</li>
+  </ul>
+  <figure><img src="img/31-media-new.jpg"><figcaption>Tải ảnh mới</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Kích thước ảnh nên dùng</b>Ảnh banner / ảnh lớn: ngang khoảng 1920px. Ảnh sản phẩm: vuông hoặc dọc, khoảng 1200px. Dung lượng nên dưới 1 MB – website tự nén và tạo nhiều cỡ ảnh.</div>
+  <div class="box warn"><b class="t">⚠ Không xoá ảnh đang dùng</b>Xoá một ảnh trong thư viện sẽ làm nó biến mất ở mọi nơi đang dùng trên website. Muốn đổi ảnh, hãy thay ảnh ở ô ảnh của trang (mục 7) thay vì xoá trong thư viện.</div>
+</section>
+
+<!-- ============ 17. ĐỔI MẬT KHẨU ============ -->
+<section class="chapter">
+  <h2>17. Đổi mật khẩu</h2>
+  <ol class="steps">
+    <li>Bấm avatar ở góc dưới bên trái → <b>Profile settings</b>. Kéo xuống phần <b>Đổi mật khẩu</b>: nhập mật khẩu hiện tại, mật khẩu mới và nhập lại mật khẩu mới.</li>
+    <li>Bấm <span class="btn">Lưu</span> ở góc trên bên phải.</li>
+  </ol>
+  <figure><img src="img/33-password.jpg"><figcaption>Hồ sơ và đổi mật khẩu</figcaption></figure>
+  <div class="box tip"><b class="t">💡 Mật khẩu mạnh</b>Ít nhất 8 ký tự, có chữ hoa, chữ thường và số. Không dùng chung mật khẩu với email hay ngân hàng. Ở phần <b>Trải nghiệm</b> bên dưới có thể đổi ngôn ngữ giao diện Admin.</div>
+</section>
+
+<!-- ============ 18. LỖI THƯỜNG GẶP ============ -->
+<section class="chapter">
+  <h2>18. Lỗi thường gặp &amp; cách xử lý</h2>
+  <table class="grid">
+    <tr><th style="width:36%">Tình huống</th><th>Cách xử lý</th></tr>
+    <tr><td>Đã sửa nhưng website không đổi</td><td>Kiểm tra đã bấm <b>Xuất bản</b> chưa (nhãn phải là <b>Published</b>, không phải Modified). Sau đó tải lại trang web (Ctrl/Cmd + Shift + R). Nếu vẫn chưa đổi, đợi khoảng 1 phút.</td></tr>
+    <tr><td>Nút Xuất bản báo lỗi đỏ</td><td>Có ô bắt buộc (dấu <b>*</b> đỏ) đang trống hoặc sai định dạng. Kéo lên tìm ô có viền đỏ, điền lại.</td></tr>
+    <tr><td>Slug báo "đã tồn tại"</td><td>Đã có sản phẩm / bài viết khác dùng đường dẫn này. Thêm chữ phân biệt, ví dụ <code>tra-o-long-2</code>.</td></tr>
+    <tr><td>Ảnh không tải lên được</td><td>Ảnh quá nặng hoặc sai định dạng. Dùng JPG / PNG / WebP (icon: SVG), dung lượng dưới 5 MB.</td></tr>
+    <tr><td>Tiêu đề trên điện thoại bị xuống nhiều dòng</td><td>Điền bản ngắn vào ô "Tiêu đề trên mobile" của khối đó (mục 8).</td></tr>
+    <tr><td>Lỡ tay xoá khối / sửa sai</td><td>Nếu chưa Lưu: rời trang và chọn không lưu. Nếu đã Lưu nhưng chưa Xuất bản: tab <b>PUBLISHED</b> vẫn giữ bản cũ để chép lại.</td></tr>
+    <tr><td>Khách không thấy mã QR</td><td>Kiểm tra <b>Cài đặt cửa hàng → Ảnh QR thanh toán</b> đã có ảnh và đã <b>Xuất bản</b>.</td></tr>
+    <tr><td>Khách tra cứu không thấy đơn</td><td>Khách phải nhập đúng mã đơn <b>và</b> đúng email hoặc số điện thoại đã đặt hàng.</td></tr>
+    <tr><td>Hộp "Bạn có chắc chắn muốn rời khỏi trang?"</td><td>Bạn có thay đổi chưa lưu. Bấm Hủy để quay lại lưu, hoặc Xác nhận để bỏ thay đổi.</td></tr>
+  </table>
+</section>
+
+<!-- ============ 19. CHECKLIST ============ -->
+<section class="chapter">
+  <h2>19. Danh sách kiểm tra trước khi xuất bản</h2>
+  <ul class="check">
+    <li>Chính tả, dấu tiếng Việt, tên sản phẩm và giá đã đúng.</li>
+    <li>Mọi ảnh mới đều có <b>Mô tả ảnh (alt)</b>.</li>
+    <li>Ảnh đúng tỉ lệ, không bị mờ hay méo.</li>
+    <li>Link trong nút / menu mở đúng trang (trang trong website bắt đầu bằng <code>/</code>).</li>
+    <li>Đã điền <b>Tiêu đề SEO</b> và <b>Mô tả SEO</b> cho trang / sản phẩm / bài viết mới.</li>
+    <li>Đã xem thử trên điện thoại; tiêu đề quá dài thì điền bản "… trên mobile".</li>
+    <li>Sản phẩm mới: đã chọn danh mục, cách pha, bật <b>Còn hàng</b>.</li>
+    <li>Ảnh QR thanh toán đã quét thử đúng tài khoản của shop.</li>
+    <li>Đã bấm <span class="btn">Xuất bản</span> và tải lại website để kiểm tra.</li>
+  </ul>
+  <figure><img src="img/40-web-home.jpg"><figcaption>Website sau khi xuất bản</figcaption></figure>
+</section>
+
+</body>
+</html>

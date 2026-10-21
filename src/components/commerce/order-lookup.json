@@ -1,0 +1,73 @@
+{
+  "collectionName": "components_commerce_order_lookup",
+  "info": {
+    "displayName": "Tra cứu đơn hàng"
+  },
+  "options": {},
+  "attributes": {
+    "codeField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "contactField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "submitLabel": {
+      "type": "string"
+    },
+    "notFoundMessage": {
+      "type": "string"
+    },
+    "resultTitle": {
+      "type": "string"
+    },
+    "itemsTitle": {
+      "type": "string"
+    },
+    "deliveryTitle": {
+      "type": "string"
+    },
+    "recipientLabel": {
+      "type": "string"
+    },
+    "addressLabel": {
+      "type": "string"
+    },
+    "carrierLabel": {
+      "type": "string"
+    },
+    "paymentLabel": {
+      "type": "string"
+    },
+    "totalLabel": {
+      "type": "string"
+    },
+    "quantityLabel": {
+      "type": "string"
+    },
+    "expectedLabel": {
+      "type": "string"
+    },
+    "placedLabel": {
+      "type": "string"
+    },
+    "confirmedLabel": {
+      "type": "string"
+    },
+    "shippingLabel": {
+      "type": "string"
+    },
+    "completedLabel": {
+      "type": "string"
+    },
+    "cancelledLabel": {
+      "type": "string"
+    },
+    "mobileResultTitle": {
+      "type": "string"
+    }
+  }
+}

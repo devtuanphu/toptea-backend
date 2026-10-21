@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_faq",
+  "info": {
+    "displayName": "Câu hỏi thường gặp"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.faq-item",
+      "repeatable": true
+    },
+    "anchorId": {
+      "type": "string"
+    }
+  }
+}

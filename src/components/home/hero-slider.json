@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_hero_slider",
+  "info": {
+    "displayName": "Banner trình chiếu"
+  },
+  "options": {},
+  "attributes": {
+    "slides": {
+      "type": "component",
+      "component": "home.slide",
+      "repeatable": true
+    },
+    "autoplaySeconds": {
+      "type": "integer",
+      "default": 3,
+      "min": 0,
+      "max": 30
+    }
+  }
+}

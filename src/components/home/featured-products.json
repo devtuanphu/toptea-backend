@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_home_featured_products",
+  "info": {
+    "displayName": "Sản phẩm nổi bật"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "cardLinkLabel": {
+      "type": "string"
+    },
+    "seeAllLabel": {
+      "type": "string"
+    },
+    "seeAllUrl": {
+      "type": "string"
+    },
+    "mobileDescription": {
+      "type": "text"
+    },
+    "mobileSeeAllLabel": {
+      "type": "string"
+    }
+  }
+}

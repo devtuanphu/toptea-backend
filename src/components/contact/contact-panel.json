@@ -1,0 +1,66 @@
+{
+  "collectionName": "components_contact_contact_panel",
+  "info": {
+    "displayName": "Liên hệ + biểu mẫu"
+  },
+  "options": {},
+  "attributes": {
+    "infoTitle": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.contact-item",
+      "repeatable": true
+    },
+    "showSocials": {
+      "type": "boolean",
+      "default": true
+    },
+    "formTitle": {
+      "type": "string",
+      "required": true
+    },
+    "nameField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "emailField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "phoneField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "topicField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "topics": {
+      "type": "component",
+      "component": "shared.option",
+      "repeatable": true
+    },
+    "messageField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "submitLabel": {
+      "type": "string",
+      "required": true
+    },
+    "successMessage": {
+      "type": "string"
+    },
+    "errorMessage": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "order_tracking_page",
+  "info": {
+    "singularName": "order-tracking-page",
+    "pluralName": "order-tracking-pages",
+    "displayName": "Tra cứu đơn hàng"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "commerce.order-lookup",
+        "sections.page-banner",
+        "sections.split-story",
+        "sections.image-band",
+        "sections.quote-band",
+        "sections.cta-band",
+        "sections.newsletter",
+        "sections.card-grid",
+        "sections.faq"
+      ]
+    }
+  }
+}

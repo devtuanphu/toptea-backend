@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_commerce_status_event",
+  "info": {
+    "displayName": "Mốc trạng thái"
+  },
+  "options": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "shipping",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "at": {
+      "type": "datetime"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

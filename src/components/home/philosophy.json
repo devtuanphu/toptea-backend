@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_home_philosophy",
+  "info": {
+    "displayName": "Triết lý thương hiệu"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "text",
+      "required": true
+    },
+    "pillars": {
+      "type": "component",
+      "component": "shared.numbered-item",
+      "repeatable": true
+    },
+    "mobileEyebrow": {
+      "type": "string"
+    },
+    "mobileStatement": {
+      "type": "text"
+    }
+  }
+}

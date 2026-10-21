@@ -1,0 +1,93 @@
+{
+  "collectionName": "components_commerce_checkout",
+  "info": {
+    "displayName": "Thanh toán"
+  },
+  "options": {},
+  "attributes": {
+    "contactTitle": {
+      "type": "string"
+    },
+    "emailField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "phoneField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "shippingTitle": {
+      "type": "string"
+    },
+    "nameField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "addressField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "provinceField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "districtField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "noteField": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": false
+    },
+    "paymentTitle": {
+      "type": "string"
+    },
+    "paymentMethods": {
+      "type": "component",
+      "component": "commerce.payment-method",
+      "repeatable": true
+    },
+    "summaryTitle": {
+      "type": "string"
+    },
+    "quantityLabel": {
+      "type": "string"
+    },
+    "subtotalLabel": {
+      "type": "string"
+    },
+    "shippingLabel": {
+      "type": "string"
+    },
+    "totalLabel": {
+      "type": "string"
+    },
+    "submitLabel": {
+      "type": "string"
+    },
+    "termsNote": {
+      "type": "text"
+    },
+    "emptyText": {
+      "type": "string"
+    },
+    "emptyButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "successUrl": {
+      "type": "string"
+    }
+  }
+}

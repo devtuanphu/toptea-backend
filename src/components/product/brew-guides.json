@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_product_brew_guides",
+  "info": {
+    "displayName": "Hướng dẫn thưởng trà"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "guides": {
+      "type": "component",
+      "component": "shared.text-card",
+      "repeatable": true
+    }
+  }
+}

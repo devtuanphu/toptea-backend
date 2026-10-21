@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_product_key_message",
+  "info": {
+    "displayName": "Thông điệp chính"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.icon-text",
+      "repeatable": true
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

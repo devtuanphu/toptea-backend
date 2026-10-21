@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_home_stage",
+  "info": {
+    "displayName": "Giai đoạn"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

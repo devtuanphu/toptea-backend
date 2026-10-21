@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_image",
+  "info": {
+    "displayName": "Hình ảnh"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sections_cta_band",
+  "info": {
+    "displayName": "Kêu gọi hành động"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "navy",
+        "white"
+      ],
+      "default": "navy"
+    },
+    "anchorId": {
+      "type": "string"
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

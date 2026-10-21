@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_commerce_payment_method",
+  "info": {
+    "displayName": "Phương thức thanh toán"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "shortTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "mobileTitle": {
+      "type": "string"
+    },
+    "hideDescriptionOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

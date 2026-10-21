@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "shop_page",
+  "info": {
+    "singularName": "shop-page",
+    "pluralName": "shop-pages",
+    "displayName": "Cửa hàng"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "shop.product-grid",
+        "sections.page-banner",
+        "sections.split-story",
+        "sections.image-band",
+        "sections.quote-band",
+        "sections.cta-band",
+        "sections.newsletter",
+        "sections.card-grid",
+        "sections.faq"
+      ]
+    }
+  }
+}

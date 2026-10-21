@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_numbered_item",
+  "info": {
+    "displayName": "Mục đánh số"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

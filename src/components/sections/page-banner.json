@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_page_banner",
+  "info": {
+    "displayName": "Banner trang"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "large"
+      ],
+      "default": "default"
+    },
+    "mobileTitle": {
+      "type": "string"
+    },
+    "mobileDescription": {
+      "type": "text"
+    },
+    "hideDescriptionOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

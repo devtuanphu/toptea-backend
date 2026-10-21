@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_faq_item",
+  "info": {
+    "displayName": "Câu hỏi"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text"
+    },
+    "openByDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "closeOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobileAnswer": {
+      "type": "text"
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

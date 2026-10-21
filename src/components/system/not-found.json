@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_system_not_found",
+  "info": {
+    "displayName": "Không tìm thấy trang"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "default": "404"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
+    },
+    "suggestionsLabel": {
+      "type": "string"
+    },
+    "suggestions": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

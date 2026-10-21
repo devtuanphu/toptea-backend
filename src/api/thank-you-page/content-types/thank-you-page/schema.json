@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "thank_you_page",
+  "info": {
+    "singularName": "thank-you-page",
+    "pluralName": "thank-you-pages",
+    "displayName": "Đặt hàng thành công"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "commerce.order-success",
+        "sections.page-banner",
+        "sections.split-story",
+        "sections.image-band",
+        "sections.quote-band",
+        "sections.cta-band",
+        "sections.newsletter",
+        "sections.card-grid",
+        "sections.faq"
+      ]
+    }
+  }
+}

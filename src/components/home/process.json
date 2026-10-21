@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_home_process",
+  "info": {
+    "displayName": "Quy trình (Từ lá đến tách)"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "stages": {
+      "type": "component",
+      "component": "home.stage",
+      "repeatable": true
+    },
+    "mobileDescription": {
+      "type": "text"
+    }
+  }
+}

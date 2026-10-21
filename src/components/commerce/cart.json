@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_commerce_cart",
+  "info": {
+    "displayName": "Giỏ hàng"
+  },
+  "options": {},
+  "attributes": {
+    "productColumnLabel": {
+      "type": "string"
+    },
+    "totalColumnLabel": {
+      "type": "string"
+    },
+    "unitPriceLabel": {
+      "type": "string"
+    },
+    "continueLabel": {
+      "type": "string"
+    },
+    "continueUrl": {
+      "type": "string"
+    },
+    "summaryTitle": {
+      "type": "string"
+    },
+    "subtotalLabel": {
+      "type": "string"
+    },
+    "shippingLabel": {
+      "type": "string"
+    },
+    "totalLabel": {
+      "type": "string"
+    },
+    "checkoutLabel": {
+      "type": "string"
+    },
+    "checkoutUrl": {
+      "type": "string"
+    },
+    "freeShippingNote": {
+      "type": "string"
+    },
+    "freeLabel": {
+      "type": "string"
+    },
+    "emptyTitle": {
+      "type": "string"
+    },
+    "emptyText": {
+      "type": "text"
+    },
+    "emptyButton": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  }
+}

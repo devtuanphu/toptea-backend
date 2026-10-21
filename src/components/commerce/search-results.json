@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_commerce_search_results",
+  "info": {
+    "displayName": "Kết quả tìm kiếm"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "titleTemplate": {
+      "type": "string"
+    },
+    "emptyTitle": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "allLabel": {
+      "type": "string"
+    },
+    "productsLabel": {
+      "type": "string"
+    },
+    "articlesLabel": {
+      "type": "string"
+    },
+    "countTemplate": {
+      "type": "string"
+    },
+    "productsHeading": {
+      "type": "string"
+    },
+    "articlesHeading": {
+      "type": "string"
+    },
+    "noResultsText": {
+      "type": "text"
+    },
+    "readMoreLabel": {
+      "type": "string"
+    },
+    "mobileTitleTemplate": {
+      "type": "string"
+    }
+  }
+}

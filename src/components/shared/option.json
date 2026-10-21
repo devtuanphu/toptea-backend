@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_option",
+  "info": {
+    "displayName": "Lựa chọn"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

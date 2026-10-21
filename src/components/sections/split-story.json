@@ -1,0 +1,75 @@
+{
+  "collectionName": "components_sections_split_story",
+  "info": {
+    "displayName": "Khối ảnh + nội dung"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "showEyebrowLine": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "mobileTitle": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "imagePosition": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ],
+      "default": "right"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "inset",
+        "full-bleed"
+      ],
+      "default": "inset"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "cream",
+        "white",
+        "navy"
+      ],
+      "default": "white"
+    },
+    "titleSize": {
+      "type": "enumeration",
+      "enum": [
+        "medium",
+        "large"
+      ],
+      "default": "medium"
+    },
+    "anchorId": {
+      "type": "string"
+    },
+    "mobileBody": {
+      "type": "text"
+    }
+  }
+}

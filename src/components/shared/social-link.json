@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_social_link",
+  "info": {
+    "displayName": "Mạng xã hội"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

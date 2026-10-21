@@ -1,20 +1,28 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
+import { seed } from './seed';
+import { ensureRevalidateWebhook } from './webhooks';
+import { localizeAdmin } from './localize-admin';
 
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
   register(/* { strapi }: { strapi: Core.Strapi } */) {},
 
   /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
+   * With SEED_DATA=true, imports the TOP WELL TEA sample content and Figma media
+   * on boot. Existing entries are never overwritten, so editors' changes are kept.
    */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  async bootstrap({ strapi }: { strapi: Core.Strapi }) {
+    if (process.env.SEED_DATA === 'true') {
+      try {
+        await seed(strapi);
+      } catch (error) {
+        strapi.log.error(`[seed] failed: ${(error as Error).stack || error}`);
+      }
+    }
+    await ensureRevalidateWebhook(strapi);
+    try {
+      await localizeAdmin(strapi);
+    } catch (error) {
+      strapi.log.error(`[admin labels] failed: ${(error as Error).message}`);
+    }
+  },
 };

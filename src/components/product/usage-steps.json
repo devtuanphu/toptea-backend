@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_product_usage_steps",
+  "info": {
+    "displayName": "Các bước sử dụng"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "steps": {
+      "type": "component",
+      "component": "shared.numbered-item",
+      "repeatable": true
+    }
+  }
+}

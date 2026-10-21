@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_icon_text",
+  "info": {
+    "displayName": "Icon + chữ"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "mobileLabel": {
+      "type": "string"
+    }
+  }
+}

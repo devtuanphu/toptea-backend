@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_tag",
+  "info": {
+    "displayName": "Thẻ"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shop_product_grid",
+  "info": {
+    "displayName": "Lưới sản phẩm"
+  },
+  "options": {},
+  "attributes": {
+    "filters": {
+      "type": "component",
+      "component": "shop.filter",
+      "repeatable": true
+    },
+    "emptyText": {
+      "type": "string"
+    }
+  }
+}

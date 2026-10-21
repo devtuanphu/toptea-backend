@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_quote_band",
+  "info": {
+    "displayName": "Trích dẫn"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "author": {
+      "type": "string"
+    },
+    "mobileQuote": {
+      "type": "text"
+    }
+  }
+}

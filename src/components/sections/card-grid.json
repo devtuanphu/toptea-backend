@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_card_grid",
+  "info": {
+    "displayName": "Lưới thẻ"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.text-card",
+      "repeatable": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "white"
+      ],
+      "default": "light"
+    },
+    "anchorId": {
+      "type": "string"
+    },
+    "mobileTitle": {
+      "type": "string"
+    }
+  }
+}

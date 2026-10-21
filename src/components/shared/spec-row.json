@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_spec_row",
+  "info": {
+    "displayName": "Dòng thông số"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "mobileLabel": {
+      "type": "string"
+    },
+    "mobileValue": {
+      "type": "string"
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

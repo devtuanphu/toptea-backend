@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_link",
+  "info": {
+    "displayName": "Liên kết"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobileLabel": {
+      "type": "string"
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

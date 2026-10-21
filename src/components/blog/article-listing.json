@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blog_article_listing",
+  "info": {
+    "displayName": "Danh sách bài viết"
+  },
+  "options": {},
+  "attributes": {
+    "allLabel": {
+      "type": "string",
+      "default": "TẤT CẢ"
+    },
+    "featuredSuffix": {
+      "type": "string"
+    },
+    "featuredLinkLabel": {
+      "type": "string"
+    },
+    "readMoreLabel": {
+      "type": "string"
+    },
+    "emptyText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "product_page",
+  "info": {
+    "singularName": "product-page",
+    "pluralName": "product-pages",
+    "displayName": "Trang chi tiết sản phẩm (chung)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "breadcrumbLabel": {
+      "type": "string"
+    },
+    "breadcrumbUrl": {
+      "type": "string"
+    },
+    "addToCartLabel": {
+      "type": "string",
+      "required": true
+    },
+    "addedLabel": {
+      "type": "string"
+    },
+    "relatedTitle": {
+      "type": "string"
+    },
+    "relatedCount": {
+      "type": "integer",
+      "default": 4,
+      "min": 0,
+      "max": 12
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.page-banner",
+        "sections.split-story",
+        "sections.image-band",
+        "sections.quote-band",
+        "sections.cta-band",
+        "sections.newsletter",
+        "sections.card-grid",
+        "sections.faq"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shop_filter",
+  "info": {
+    "displayName": "Bộ lọc"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "category",
+        "brew"
+      ],
+      "default": "all"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

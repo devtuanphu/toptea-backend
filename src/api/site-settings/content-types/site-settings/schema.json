@@ -1,0 +1,123 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-settings",
+    "pluralName": "site-settings-list",
+    "displayName": "Cài đặt cửa hàng"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "currencySuffix": {
+      "type": "string",
+      "default": "₫"
+    },
+    "shippingFee": {
+      "type": "integer",
+      "default": 30000,
+      "min": 0
+    },
+    "freeShippingThreshold": {
+      "type": "integer",
+      "default": 500000,
+      "min": 0
+    },
+    "orderPrefix": {
+      "type": "string",
+      "default": "TWT"
+    },
+    "productCardTagSeparator": {
+      "type": "string",
+      "default": "·"
+    },
+    "cartAddedMessage": {
+      "type": "string"
+    },
+    "cartToastCountTemplate": {
+      "type": "string"
+    },
+    "cartToastViewCartLabel": {
+      "type": "string"
+    },
+    "cartToastCheckoutLabel": {
+      "type": "string"
+    },
+    "cartToastCloseLabel": {
+      "type": "string"
+    },
+    "cartCountLabel": {
+      "type": "string"
+    },
+    "loadingLabel": {
+      "type": "string"
+    },
+    "genericError": {
+      "type": "string"
+    },
+    "freeLabel": {
+      "type": "string"
+    },
+    "decreaseLabel": {
+      "type": "string"
+    },
+    "increaseLabel": {
+      "type": "string"
+    },
+    "removeLabel": {
+      "type": "string"
+    },
+    "clearLabel": {
+      "type": "string"
+    },
+    "mainNavLabel": {
+      "type": "string"
+    },
+    "secondaryNavLabel": {
+      "type": "string"
+    },
+    "filterProductsLabel": {
+      "type": "string"
+    },
+    "filterArticlesLabel": {
+      "type": "string"
+    },
+    "breadcrumbLabel": {
+      "type": "string"
+    },
+    "emailFromName": {
+      "type": "string"
+    },
+    "orderEmailSubject": {
+      "type": "string"
+    },
+    "orderEmailBody": {
+      "type": "text"
+    },
+    "shopOrderEmailSubject": {
+      "type": "string"
+    },
+    "contactEmailSubject": {
+      "type": "string"
+    },
+    "bankTransferMethodCode": {
+      "type": "string",
+      "default": "bank-transfer"
+    },
+    "bankTransferTitle": {
+      "type": "string"
+    },
+    "bankQr": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bankTransferNote": {
+      "type": "text"
+    }
+  }
+}

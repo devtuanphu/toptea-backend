@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_image_band",
+  "info": {
+    "displayName": "Ảnh toàn khổ"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  }
+}

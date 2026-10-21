@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_button",
+  "info": {
+    "displayName": "Nút bấm"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "ghost",
+        "light",
+        "outline-light"
+      ],
+      "default": "primary"
+    }
+  }
+}

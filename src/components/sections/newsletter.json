@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_newsletter",
+  "info": {
+    "displayName": "Đăng ký nhận tin"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "emailPlaceholder": {
+      "type": "string"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "required": true
+    },
+    "successMessage": {
+      "type": "string"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "anchorId": {
+      "type": "string"
+    }
+  }
+}

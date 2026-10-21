@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_nav_group",
+  "info": {
+    "displayName": "Nhóm liên kết"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  }
+}

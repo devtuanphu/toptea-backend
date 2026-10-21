@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_commerce_order_success",
+  "info": {
+    "displayName": "Đặt hàng thành công"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "orderCodeLabel": {
+      "type": "string"
+    },
+    "totalLabel": {
+      "type": "string"
+    },
+    "paymentLabel": {
+      "type": "string"
+    },
+    "emailLabel": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": true
+    },
+    "mobileDescription": {
+      "type": "text"
+    },
+    "mobileOrderCodeLabel": {
+      "type": "string"
+    }
+  }
+}

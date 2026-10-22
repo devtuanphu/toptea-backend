@@ -114,7 +114,7 @@ export async function seed(strapi: Core.Strapi) {
 
   // Content upgrades (new fields such as the Figma mobile copy) run once per version,
   // so an editor who later clears or unchecks a field is never overridden.
-  const UPGRADE_VERSION = 8;
+  const UPGRADE_VERSION = 11;
   const store = strapi.store({ type: 'plugin', name: 'twt-seed' });
   const appliedVersion = Number((await store.get({ key: 'upgradeVersion' })) || 0);
   const runUpgrade = appliedVersion < UPGRADE_VERSION;
@@ -200,6 +200,18 @@ export async function seed(strapi: Core.Strapi) {
     stats.upgraded++;
   }
 
+  // The shop page opens with its own image slideshow instead of the shared text banner.
+  async function replaceShopBanner() {
+    if (!runUpgrade) return;
+    const uid = 'api::shop-page.shop-page';
+    const page: any = await docs(uid).findFirst({ populate: populateFor(strapi, uid) as any });
+    if (!page || page.sections?.some((s: any) => s.__component === 'shop.banner-slider')) return;
+    const slider = await resolve(data.shopBannerSlider);
+    const rest = toWrite(page.sections || [], false).filter((s: any) => s.__component !== 'sections.page-banner');
+    await docs(uid).update({ documentId: page.documentId, data: { sections: [slider, ...rest] } } as any);
+    await docs(uid).publish({ documentId: page.documentId } as any);
+    stats.upgraded++;
+  }
 
   async function ensureBySlug(uid: string, entry: any, build: (entry: any) => Promise<any>) {
     const existing: any = await docs(uid).findFirst({ filters: { slug: entry.slug } as any });
@@ -284,6 +296,7 @@ export async function seed(strapi: Core.Strapi) {
 
   // 4b. Payment methods no longer offered.
   await removeRetiredPaymentMethods();
+  await replaceShopBanner();
 
   // 5. A demo order for the tracking page
   for (const order of data.demoOrders) {

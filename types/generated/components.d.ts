@@ -229,6 +229,10 @@ export interface HomeHeroSlider extends Struct.ComponentSchema {
         number
       > &
       Schema.Attribute.DefaultTo<3>;
+    nextLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Slide ti\u1EBFp theo'>;
+    prevLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Slide tr\u01B0\u1EDBc'>;
     slides: Schema.Attribute.Component<'home.slide', true>;
   };
 }
@@ -656,6 +660,26 @@ export interface SharedTextCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ShopBannerSlider extends Struct.ComponentSchema {
+  collectionName: 'components_shop_banner_slider';
+  info: {
+    displayName: 'Banner \u1EA3nh tr\u00ECnh chi\u1EBFu';
+  };
+  attributes: {
+    images: Schema.Attribute.Component<'shared.image', true>;
+    slideSeconds: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 30;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3.5>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ShopFilter extends Struct.ComponentSchema {
   collectionName: 'components_shop_filter';
   info: {
@@ -741,6 +765,7 @@ declare module '@strapi/strapi' {
       'shared.spec-row': SharedSpecRow;
       'shared.tag': SharedTag;
       'shared.text-card': SharedTextCard;
+      'shop.banner-slider': ShopBannerSlider;
       'shop.filter': ShopFilter;
       'shop.product-grid': ShopProductGrid;
       'system.not-found': SystemNotFound;

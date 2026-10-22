@@ -1437,6 +1437,7 @@ export interface ApiShopPageShopPage extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
+        'shop.banner-slider',
         'shop.product-grid',
         'sections.page-banner',
         'sections.split-story',

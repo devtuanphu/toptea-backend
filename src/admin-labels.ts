@@ -55,6 +55,9 @@ export const fieldLabels: Record<string, string> = {
   guides: 'Hướng dẫn',
   slides: 'Các slide',
   autoplaySeconds: 'Tự chuyển slide sau (giây)',
+  prevLabel: 'Tên nút slide trước',
+  slideSeconds: 'Mỗi ảnh hiện (giây)',
+  nextLabel: 'Tên nút slide sau',
   ctaLabel: 'Chữ trên nút',
   ctaUrl: 'Đường dẫn nút',
   question: 'Câu hỏi',
@@ -323,6 +326,7 @@ export const modelLabels: Record<string, Record<string, string>> = {
   'shared.social-link': { url: 'Đường dẫn trang' },
   'sections.faq': { items: 'Các câu hỏi' },
   'shared.nav-group': { title: 'Tiêu đề cột', links: 'Các liên kết' },
+  'shop.banner-slider': { title: 'Tiêu đề trang (ẩn, cho SEO)', images: 'Các ảnh trình chiếu' },
 };
 
 const MOBILE_HINT = 'Để trống thì điện thoại dùng nội dung bản desktop.';
@@ -352,6 +356,9 @@ export const fieldHints: Record<string, string> = {
   slug: 'Phần cuối của đường dẫn trang, chỉ chữ thường không dấu và dấu gạch ngang. Ví dụ: tra-o-long.',
   alt: 'Mô tả ngắn nội dung ảnh, giúp SEO và người khiếm thị.',
   autoplaySeconds: 'Đặt 0 để tắt tự chuyển.',
+  slideSeconds: 'Banner cửa hàng: thời gian mỗi ảnh hiện trước khi chuyển, ví dụ 3.5.',
+  prevLabel: 'Không hiện trên web: trình đọc màn hình đọc tên này cho nửa trái banner (bấm để lùi slide).',
+  nextLabel: 'Không hiện trên web: trình đọc màn hình đọc tên này cho nửa phải banner (bấm để sang slide).',
   metaTitle: 'Tiêu đề hiện trên Google, nên dưới 60 ký tự.',
   metaDescription: 'Đoạn mô tả hiện trên Google, nên 120–160 ký tự.',
   noIndex: 'Chỉ bật cho trang không muốn xuất hiện trên Google.',
@@ -384,4 +391,8 @@ export const modelHints: Record<string, Record<string, string>> = {
   },
   'commerce.payment-method': { code: 'Giữ nguyên mã: cod, bank-transfer.' },
   'api::contact-message.contact-message': { handlingStatus: 'Đổi sang "handled" khi đã trả lời khách.' },
+  'shop.banner-slider': {
+    title: 'Không hiện trên ảnh; Google và trình đọc màn hình dùng làm tiêu đề H1 của trang.',
+    images: 'Banner chỉ có ảnh, tự chuyển và zoom chậm. Nên dùng ảnh ngang, rộng ít nhất 1920px.',
+  },
 };

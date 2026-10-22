@@ -624,6 +624,14 @@ const banner = (
   ...mobile,
 });
 
+/** Shop page top: image-only slideshow (slow zoom) that stays put while the page scrolls over it. */
+export const shopBannerSlider = {
+  __component: 'shop.banner-slider',
+  title: 'Bộ sưu tập trà TOP WELL TEA',
+  images: [photo('hills'), photo('bud'), photo('leavesDark'), photo('cup')],
+  slideSeconds: 3.5,
+};
+
 // ---------- single types ----------
 export const singles: Record<string, any> = {
   global: {
@@ -762,6 +770,8 @@ export const singles: Record<string, any> = {
       {
         __component: 'home.hero-slider',
         autoplaySeconds: 3,
+        prevLabel: 'Slide trước',
+        nextLabel: 'Slide tiếp theo',
         slides: [
           {
             eyebrow: 'WELLNESS FROM MAE SALONG',
@@ -992,14 +1002,7 @@ export const singles: Record<string, any> = {
       'hills',
     ),
     sections: [
-      banner(
-        'CỬA HÀNG',
-        'Bộ sưu tập trà',
-        'Gói trà 8g pha nóng & ủ lạnh, nắp pha trà tức thì — chọn cách thưởng trà của riêng bạn.',
-        'hills',
-        'default',
-        { mobileDescription: 'Pha nóng · Ủ lạnh · Pha ngay — chọn cách thưởng trà của bạn.' },
-      ),
+      shopBannerSlider,
       {
         __component: 'shop.product-grid',
         filters: [

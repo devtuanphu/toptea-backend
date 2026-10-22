@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shop_banner_slider",
+  "info": {
+    "displayName": "Banner ảnh trình chiếu"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": true
+    },
+    "slideSeconds": {
+      "type": "decimal",
+      "default": 3.5,
+      "min": 1,
+      "max": 30
+    }
+  }
+}

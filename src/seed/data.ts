@@ -924,17 +924,6 @@ export const singles: Record<string, any> = {
       'cozy',
     ),
     sections: [
-      banner(
-        'VỀ CHÚNG TÔI',
-        'Wellness from Mae Salong',
-        'TOP WELL TEA ra đời từ niềm tin rằng thưởng trà có thể vừa hiện đại, vừa giữ trọn tinh thần truyền thống — bắt đầu từ một vùng trà đặc biệt phía bắc Thái Lan.',
-        'cozy',
-        'large',
-        {
-          mobileTitle: 'Wellness',
-          mobileDescription: 'Trà wellness từ cao nguyên Mae Salong — hiện đại mà vẫn giữ tinh thần truyền thống.',
-        },
-      ),
       { __component: 'sections.image-band', image: photo('hills') },
       {
         __component: 'sections.split-story',

@@ -114,7 +114,7 @@ export async function seed(strapi: Core.Strapi) {
 
   // Content upgrades (new fields such as the Figma mobile copy) run once per version,
   // so an editor who later clears or unchecks a field is never overridden.
-  const UPGRADE_VERSION = 11;
+  const UPGRADE_VERSION = 12;
   const store = strapi.store({ type: 'plugin', name: 'twt-seed' });
   const appliedVersion = Number((await store.get({ key: 'upgradeVersion' })) || 0);
   const runUpgrade = appliedVersion < UPGRADE_VERSION;
@@ -213,6 +213,18 @@ export async function seed(strapi: Core.Strapi) {
     stats.upgraded++;
   }
 
+  // The about page no longer opens with a text banner; it starts with the image band.
+  async function removeAboutBanner() {
+    if (!runUpgrade) return;
+    const uid = 'api::about-page.about-page';
+    const page: any = await docs(uid).findFirst({ populate: populateFor(strapi, uid) as any });
+    if (page?.sections?.[0]?.__component !== 'sections.page-banner') return;
+    const sections = toWrite(page.sections, false).slice(1);
+    await docs(uid).update({ documentId: page.documentId, data: { sections } } as any);
+    await docs(uid).publish({ documentId: page.documentId } as any);
+    stats.upgraded++;
+  }
+
   async function ensureBySlug(uid: string, entry: any, build: (entry: any) => Promise<any>) {
     const existing: any = await docs(uid).findFirst({ filters: { slug: entry.slug } as any });
     if (existing) {
@@ -297,6 +309,7 @@ export async function seed(strapi: Core.Strapi) {
   // 4b. Payment methods no longer offered.
   await removeRetiredPaymentMethods();
   await replaceShopBanner();
+  await removeAboutBanner();
 
   // 5. A demo order for the tracking page
   for (const order of data.demoOrders) {
